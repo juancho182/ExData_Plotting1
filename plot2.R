@@ -12,8 +12,11 @@ myData$DateTime <- strptime(paste(myData$Date, myData$Time), format="%d/%m/%Y %H
 #make column numeric
 myData[, 3]  <- as.numeric(myData[, 3])
 
+#open PNG
 png(filename="plot2.png", width = 480, height = 480)
 
+#Draw line chart
 plot(myData$DateTime, myData$Global_active_power, type="l",ylab = "Global Active Power (kilowatts)", xlab="")
 
+#Close PNG
 dev.off()

@@ -9,8 +9,11 @@ myData <- filter(data, Date %in% c("1/2/2007", "2/2/2007"))
 #make column numeric
 myData[, 3]  <- as.numeric(myData[, 3])
 
+#open PNG
 png(filename="plot1.png", width = 480, height = 480)
 
+#draw histogram
 hist(myData$Global_active_power, main = "Global Active Power", col="red", xlab = "Global Active Power (kilowatts)")
 
+#close PNG
 dev.off()
